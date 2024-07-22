@@ -149,21 +149,29 @@ const Home = () => {
       <FloatButton type="primary" onClick={() => console.log("onClick")} />
 
       <Drawer
-        title="Basic Drawer"
         placement={placement}
         closable={false}
         onClose={onClose}
         open={open}
         key={placement}
         styles={{
+          wrapper: {
+            width: "256px",
+          },
           body: {
             padding: "0px",
           },
         }}
       >
-        <Sider style={{ backgroundColor: colorBgContainer }} trigger={null}>
+        <Sider
+          width={256}
+          // style={{
+          //   backgroundColor: colorBgContainer,
+          // }}
+          trigger={null}
+        >
           <div className="App-logo" />
-          <Menu theme="dark" defaultSelectedKeys={["1"]} items={items} />
+          <Menu theme="light" defaultSelectedKeys={["1"]} items={items} />
         </Sider>
       </Drawer>
     </div>
