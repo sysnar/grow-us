@@ -15,6 +15,7 @@ import {
   FloatButton,
 } from "antd";
 import Card from "./component/card";
+import Icon, { MenuOutlined } from "@ant-design/icons";
 const { Header, Sider, Content, Footer } = Layout;
 
 const items = [
@@ -43,6 +44,21 @@ const items = [
     label: "nav 6",
   },
 ];
+const MenuIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+    />
+  </svg>
+);
 
 const Home = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -100,19 +116,7 @@ const Home = () => {
                 width: 64,
               }}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
-                />
-              </svg>
+              <MenuOutlined />
             </Button>
           </div>
         </Header>
@@ -146,7 +150,11 @@ const Home = () => {
 
         <Footer style={{ textAlign: "center" }}>Ant Design ©2018 Created by Ant UED</Footer>
       </Layout>
-      <FloatButton type="primary" onClick={() => console.log("onClick")} />
+      <FloatButton
+        type="primary"
+        href="./newPost"
+        // onClick={() => console.log("onClick")}
+      />
 
       <Drawer
         placement={placement}
