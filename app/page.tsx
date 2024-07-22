@@ -148,7 +148,7 @@ const Home = () => {
           </Row>
         </Content>
 
-        <Footer style={{ textAlign: "center" }}>Ant Design ©2018 Created by Ant UED</Footer>
+        <Footer style={{ textAlign: "center" }}>©2024 Created by sysnar</Footer>
       </Layout>
       <FloatButton
         type="primary"
